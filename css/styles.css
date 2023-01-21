@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+:root{
+    --fuente: 'Outfit', sans-serif;
+    --softBlue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+    --cyan2: hsla(178, 100%, 50%, 0.5);
+    --mainBG: hsl(217, 54%, 11%);
+    --cardBG: hsl(216, 50%, 16%);
+    --line: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+}
+*{
+    padding: 0;
+    margin: 0;
+    color: white;
+}
+html{
+    box-sizing: border-box;
+    font-size: 62.5%; /* 1 rem = 10px */
+}
+*,*:before, *:after{
+    box-sizing: inherit; 
+}
+body{
+    font-family: var(--fuente);
+    font-size: 1.8rem;
+    padding-top: 6rem;
+    background-color: var(--mainBG);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* GLOBALES */
+.card{
+    max-width: 32.6rem;
+    background-color: var(--cardBG);
+    border-radius: 2rem;
+    padding: 2.5rem;
+    width: 90%; 
+}
+.card__producto-img{
+    position: relative;
+    
+}
+.card__producto-img img{
+    border-radius: .7rem;
+    display: block;
+    width: 100%;
+}
+.card__producto-img::after{
+    content: url(../images/icon-view.svg);
+    background: var(--cyan2);
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: all 0.2s ease;
+    border-radius: .7rem;
+}
+.card__producto-img:hover::after{
+    opacity: 1;
+    cursor: pointer;
+}
+.card__body{
+    margin-top: 3rem;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 1.5rem;
+}
+.card__body-titulo{
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+    font-weight: 700;
+    display: inline-block;
+}
+.card__body-titulo:hover{
+    color: var(--cyan);
+    cursor: pointer;
+}
+.card__body-parrafo{
+    font-size: 1.7rem;
+    line-height: 1.5;
+    font-weight: 300;
+    color: var(--softBlue);
+}
+.card__body-info{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.card__precio, 
+.card__tiempo{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+.card__precio span{
+    color: var(--cyan);
+    font-weight: 400;
+}
+.card__tiempo span{
+    color: var(--softBlue);
+    font-weight: 300;
+    font-size: 1.7rem;
+}
+.card__footer{
+    margin-top: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+.card__footer img{
+    width: 3.4rem;
+    height: 3.4rem;
+    border-radius: 5rem;
+    border: 1px solid var(--white);
+}
+.card__footer p{
+    color: var(--softBlue);
+    font-weight: 300;
+    font-size: 1.5rem;
+}
+.attribution{
+    margin-top: 3rem;
+    color: var(--softBlue);
+    font-size: 1.5rem;
+}
+
