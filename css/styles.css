@@ -24,10 +24,9 @@ html{
 body{
     font-family: var(--fuente);
     font-size: 1.8rem;
-    padding-top: 6rem;
+    min-height: 100vh;
     background-color: var(--mainBG);
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
@@ -124,9 +123,5 @@ body{
     font-weight: 300;
     font-size: 1.5rem;
 }
-.attribution{
-    margin-top: 3rem;
-    color: var(--softBlue);
-    font-size: 1.5rem;
-}
+
 
